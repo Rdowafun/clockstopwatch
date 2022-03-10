@@ -59,7 +59,8 @@ const secStop = document.querySelector('.stopwatch__seconds'),
     hourStop = document.querySelector('.stopwatch__hours'),
     btn = document.querySelector('.stopwatch__btn'),
     stopb = document.querySelector('.stop__btn'),
-    pause = document.querySelector('.pausewatch__btn');
+    pause = document.querySelector('.pausewatch__btn'),
+    ind = document.querySelector('.tabsLink__span');;
 let milliseconds = 0,
     scnds = 0,
     m = 0,
@@ -69,7 +70,8 @@ let milliseconds = 0,
 btn.addEventListener('click', function () {
     clearInterval(p);
     p = setInterval(() => {
-
+        ind.classList.remove('active_clear');
+        ind.classList.add('active');
         milliseconds++;
         mlsecStop.innerHTML = milliseconds < 10 ? '0' + milliseconds : milliseconds
         if (milliseconds == 100) {
@@ -91,9 +93,13 @@ btn.addEventListener('click', function () {
 })
 pause.addEventListener('click', function(){
     clearInterval(p);
+    ind.classList.remove('active');
+    ind.classList.add('active_clear');
 })
 stopb.addEventListener('click', function(){
     clearInterval(p);
+    ind.classList.remove('active_clear');
+    ind.classList.remove('active');
     milliseconds = 0;
     scnds = 0;
     m = 0;
