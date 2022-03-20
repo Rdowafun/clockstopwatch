@@ -17,14 +17,14 @@ function clock() {
     hour.style = `transform: rotate(${hours}deg)`
 
     hoursNum.innerHTML = time.getHours() < 10 ? '0' + time.getHours() : time.getHours()
-    secondsNum.innerHTML = time.getSeconds() < 10 ? '0' + time.getSeconds() : time.getSeconds()
-    if(time.getMilliseconds() < 10 ){
-        millisecondsNum.innerHTML = '00' + time.getMilliseconds()
-    }else if(time.getMilliseconds() < 100){
-        millisecondsNum.innerHTML = '0' + time.getMilliseconds()
-    } else if(time.getMilliseconds() > 100){
-        millisecondsNum.innerHTML =time.getMilliseconds();
-    }
+    // secondsNum.innerHTML = time.getSeconds() < 10 ? '0' + time.getSeconds() : time.getSeconds()
+    // if(time.getMilliseconds() < 10 ){
+    //     millisecondsNum.innerHTML = '00' + time.getMilliseconds()
+    // }else if(time.getMilliseconds() < 100){
+    //     millisecondsNum.innerHTML = '0' + time.getMilliseconds()
+    // } else if(time.getMilliseconds() > 100){
+    //     millisecondsNum.innerHTML =time.getMilliseconds();
+    // }
     minutesNum.innerHTML = time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes()
     // setTimeout(функция, миллисекунды) - делает задержку вызова функции
     setTimeout(() => clock(), 10)
