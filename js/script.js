@@ -104,10 +104,10 @@ stopb.addEventListener('click', function(){
     scnds = 0;
     m = 0;
     h = 0;
-    mlsecStop.innerHTML = milliseconds;
-    secStop.innerHTML = scnds;
-    minStop.innerHTML = m;
-    hourStop.innerHTML = h;
+    mlsecStop.innerHTML = '00';
+    secStop.innerHTML = '00';
+    minStop.innerHTML = '00';
+    hourStop.innerHTML = '00';
 
 })
 
